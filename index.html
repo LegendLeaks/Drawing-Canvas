@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Drawing</title>
+        <link href="styles.css" type="text/css" rel="stylesheet"/>
+        <script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        
+        <div class="field">
+            <canvas id="canvas"></canvas>
+            <div class="tools">
+                <button onclick="undo_last()" type="button" class="button">Undo</button>
+                <button onclick="clear_canvas()" type="button" class="button">Clear</button>
+
+                <div class="colour-field" style="background: orange;"></div>
+                <div class="colour-field" style="background: teal;"></div>
+                <div class="colour-field" style="background: lime;"></div>
+                <div class="colour-field" style="background: magenta;"></div>
+
+                <input oninput="draw_colour = this.value" type="color" class="colour-picker">
+                <input type="range" min="1" max="50" class="pen-range"
+                        oninput="draw_width = this.value">
+
+            </div>
+        </div>
+
+    </body>
+
+    <script src="index.js"></script>
+
+</html>
