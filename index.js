@@ -1,7 +1,7 @@
 /** @type {HTMLCanvasElement} */
 const canvas = document.getElementById("canvas");
 canvas.width = window.innerWidth - 60;
-canvas.height = 400;
+canvas.height = window.innerHeight - 160;
 
 let context = canvas.getContext("2d");
 context.fillStyle = "white";
@@ -35,6 +35,11 @@ document.addEventListener('keydown', function(event){
         clear_canvas();
         }
     }, false);
+
+document.addEventListener('resize', function(event){
+    canvas.width = window.innerWidth - 60;
+    canvas.height = window.innerHeight - 160;
+})
 
 function start(event)
 {
